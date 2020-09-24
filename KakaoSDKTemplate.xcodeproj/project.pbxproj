@@ -8,12 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		23DEAACA251C79000007E436 /* KakaoSDKTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 23DEAAC8251C79000007E436 /* KakaoSDKTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23DEAAD2251C79500007E436 /* TemplateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DEAAD1251C79500007E436 /* TemplateModels.swift */; };
+		23DEAAD6251C79F70007E436 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DEAAD4251C79F70007E436 /* Alamofire.framework */; };
+		23DEAAD7251C79F70007E436 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23DEAAD4251C79F70007E436 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23DEAAD8251C79F70007E436 /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DEAAD5251C79F70007E436 /* KakaoSDKCommon.framework */; };
+		23DEAAD9251C79F70007E436 /* KakaoSDKCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23DEAAD5251C79F70007E436 /* KakaoSDKCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23DEAADA251C79F70007E436 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				23DEAAD9251C79F70007E436 /* KakaoSDKCommon.framework in Embed Frameworks */,
+				23DEAAD7251C79F70007E436 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		23DEAAC5251C79000007E436 /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DEAAC8251C79000007E436 /* KakaoSDKTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KakaoSDKTemplate.h; sourceTree = "<group>"; };
 		23DEAAC9251C79000007E436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23DEAAD1251C79500007E436 /* TemplateModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateModels.swift; sourceTree = "<group>"; };
+		23DEAAD4251C79F70007E436 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		23DEAAD5251C79F70007E436 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoSDKCommon.framework; path = Carthage/Build/iOS/KakaoSDKCommon.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DEAAD8251C79F70007E436 /* KakaoSDKCommon.framework in Frameworks */,
+				23DEAAD6251C79F70007E436 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +57,7 @@
 			children = (
 				23DEAAC7251C79000007E436 /* KakaoSDKTemplate */,
 				23DEAAC6251C79000007E436 /* Products */,
+				23DEAAD3251C79F70007E436 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,9 +73,27 @@
 			isa = PBXGroup;
 			children = (
 				23DEAAC8251C79000007E436 /* KakaoSDKTemplate.h */,
+				23DEAAD0251C79500007E436 /* model */,
 				23DEAAC9251C79000007E436 /* Info.plist */,
 			);
 			path = KakaoSDKTemplate;
+			sourceTree = "<group>";
+		};
+		23DEAAD0251C79500007E436 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				23DEAAD1251C79500007E436 /* TemplateModels.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		23DEAAD3251C79F70007E436 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23DEAAD4251C79F70007E436 /* Alamofire.framework */,
+				23DEAAD5251C79F70007E436 /* KakaoSDKCommon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +118,7 @@
 				23DEAAC1251C79000007E436 /* Sources */,
 				23DEAAC2251C79000007E436 /* Frameworks */,
 				23DEAAC3251C79000007E436 /* Resources */,
+				23DEAADA251C79F70007E436 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DEAAD2251C79500007E436 /* TemplateModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +312,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KakaoSDKTemplate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,8 +327,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.Roomfriends.KakaoSDKTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -290,8 +342,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KakaoSDKTemplate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,8 +357,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.Roomfriends.KakaoSDKTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
